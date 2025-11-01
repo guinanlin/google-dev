@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Duplicate Finder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body { padding-top: 50px; }
+        .container { max-width: 600px; }
+    </style>
+    <link rel="icon" href="data:,">
+    <!-- prevent 404 favicon in simple setups -->
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="robots" content="noindex"/>
+    <meta name="referrer" content="no-referrer"/>
+    <meta name="format-detection" content="telephone=no"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="mb-4 text-center">Upload CSV to Find Duplicates</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="p-4 border rounded shadow-sm">
+        <div class="form-group">
+            <label for="file">Choose CSV File:</label>
+            <input type="file" class="form-control-file" id="file" name="file" accept=".csv" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Upload and Process</button>
+    </form>
+    <div class="text-muted small mt-3">All columns are compared for duplicates.</div>
+  </div>
+</body>
+</html>
+
+
