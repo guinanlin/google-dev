@@ -1,7 +1,6 @@
 (() => {
   const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const forceFx = () => (document.body && document.body.dataset && document.body.dataset.forceFx === 'true');
-  if (prefersReduced && !forceFx()) return;
+  if (prefersReduced) return;
 
   const dpr = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
   const canvas = document.createElement('canvas');
@@ -129,5 +128,4 @@
   window.__fxReady = true;
   requestAnimationFrame(step);
 })();
-
 
